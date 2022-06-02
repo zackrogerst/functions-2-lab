@@ -41,8 +41,10 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 
 // CODE HERE
 
-const postTaxPrices = prices.map(function(num) {return num * 1.07;});
+const postTaxPrices = prices.map(function (num) { return num * 1.07; });
 // console.log(postTaxPrices);
+
+
 
 ////////// PROBLEM 3 //////////
 
@@ -58,7 +60,13 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 // CODE HERE
-// const totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
+
+// const totalPopulation = populations.reduce(/* Provide Your Callback Here */)
+
+const totalPopulation = populations.reduce(function(acc, curr) {
+  return acc + curr;
+})
+// console.log(totalPopulation);
 
 
 
