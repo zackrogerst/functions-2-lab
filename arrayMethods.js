@@ -110,11 +110,20 @@ const orders = [{ "price": 15, "tax": 0.09 }, { "price": 42, "tax": 0.07 }, { "p
 // Do not edit code above.
 
 /*
-  Use a higher order method to get all the order totals after adding in the sales tax (given to you as a tax rate, hint: you'll need to do some multiplication). Your answer should be an array of numbers, one total for each order.
+  Use a higher order method to get all the order totals after adding in the sales tax (given to you as a tax rate, hint: you'll need to do some multiplication). 
+  Your answer should be an array of numbers, one total for each order.
 */
 
 // CODE HERE
 
+//map it out
+//multiply price and 1.(tax)
+
+const postTaxOrders = orders.map(function (obj) { 
+  return obj["price"] * (1 + obj["tax"]);
+});
+
+// console.log(postTaxOrders);
 
 
 ////////// PROBLEM 6 //////////
