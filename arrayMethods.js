@@ -93,7 +93,7 @@ const monstersInYourPocket = [{ "monster": "Bulbabunny", "CP": 156 }, { "monster
 // const myStrongest = monstersInYourPocket.filter(/* Provide Your Callback Here */)
 
 
-const myStrongest = monstersInYourPocket.filter(function(elem){return elem["CP"] > 200});
+const myStrongest = monstersInYourPocket.filter(function (elem) { return elem["CP"] > 200 });
 // const myStrongest = monstersInYourPocket.filter(elem => elem["CP"] > 200);
 
 // console.log(myStrongest);
@@ -119,7 +119,7 @@ const orders = [{ "price": 15, "tax": 0.09 }, { "price": 42, "tax": 0.07 }, { "p
 //map it out
 //multiply price and 1.(tax)
 
-const postTaxOrders = orders.map(function (obj) { 
+const postTaxOrders = orders.map(function (obj) {
   return obj["price"] * (1 + obj["tax"]);
 });
 
@@ -143,3 +143,15 @@ const purchases = [{ "owner": "Barry", "price": 103 }, { "owner": "Bob", "price"
 */
 
 // CODE HERE
+
+// const bobsTotal = purchases.filter(function(obj) {return obj.owner === "Bob"});
+
+
+const bobsArray = purchases.filter(obj => obj.owner === "Bob");
+console.log(bobsArray);
+
+const bobsFilteredArray = bobsArray.map(function (obj) {return obj["price"];});
+console.log(bobsFilteredArray);
+
+const bobsTotal = bobsFilteredArray.reduce(function (acc, curr) { return acc + curr });
+console.log(bobsTotal);
