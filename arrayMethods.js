@@ -146,12 +146,29 @@ const purchases = [{ "owner": "Barry", "price": 103 }, { "owner": "Bob", "price"
 
 // const bobsTotal = purchases.filter(function(obj) {return obj.owner === "Bob"});
 
+// //// three seperate blocks
+// const bobsArray = purchases.filter(obj => obj.owner === "Bob");
+// console.log(bobsArray);
 
-const bobsArray = purchases.filter(obj => obj.owner === "Bob");
-console.log(bobsArray);
+// const bobsFilteredArray = bobsArray.map(function (obj) {return obj["price"];});
+// // console.log(bobsFilteredArray);
 
-const bobsFilteredArray = bobsArray.map(function (obj) {return obj["price"];});
-console.log(bobsFilteredArray);
+// const bobsTotal = bobsFilteredArray.reduce(function (acc, curr) { return acc + curr });
+// // console.log(bobsTotal);
 
-const bobsTotal = bobsFilteredArray.reduce(function (acc, curr) { return acc + curr });
-console.log(bobsTotal);
+
+
+// ////all chained together
+// const bobsPurchasesSumArray = purchases.filter(obj => obj.owner === "Bob").map(function (obj) { return obj["price"]; }).reduce(function (acc, curr) { return acc + curr });
+// console.log(bobsPurchasesSumArray);
+
+
+//// arrow
+// const bobsPurchasesSumArray = (purchases) =>
+//   purchases
+//     .filter((obj) => obj.owner === "Bob")
+//     .map((obj) => obj["price"])
+//     .reduce((acc, curr) => acc + curr);
+
+
+// console.log(bobsPurchasesSumArray(purchases));
