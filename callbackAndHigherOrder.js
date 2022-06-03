@@ -39,7 +39,7 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 // CODE HERE 
 
 
-const first = (arr, cbak) => cbak(arr);
+const first = (arr, cbak) => cbak(arr[0]);
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
@@ -61,6 +61,7 @@ const first = (arr, cbak) => cbak(arr);
 
 // CODE HERE
 
+const last = (arr, cbak) => cbak(arr[arr.length - 1]);
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
