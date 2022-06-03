@@ -85,12 +85,21 @@ const last = (arr, cbak) => cbak(arr[arr.length - 1]);
 // CODE HERE 
 
 
+const contains = (arr, name, cbak) => {
+  if (name) {
+    return cbak(true);
+  } else {
+    return cbak(false)
+  }
+}
+
+
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
 // contains(names, 'Colt', result => {
-//   if(result === true){
+//   if (result === true) {
 //     console.log('Colt is in the array')
 //   } else {
 //     console.log('Colt is not in the array')
@@ -185,7 +194,7 @@ var users = [
 
 /*
   You'll be writing a higher order function that returns
-  another function. 
+  another function.
 
   Create a function called addingFactory that takes in
   one parameter (it will be a number).
@@ -201,12 +210,12 @@ var users = [
 
 /*
   Now that you have addingFactory, you can create other
-  functions from it. 
+  functions from it.
 
   You're going to invoke addingFactory and save the result
-  to a new variable. 
+  to a new variable.
 
-  Create a variable called addTen and set it equal to 
+  Create a variable called addTen and set it equal to
   the invocation of addingFactory passing in the number
   10 as an arguemnt.
 */
@@ -214,7 +223,7 @@ var users = [
 // CODE HERE
 
 /*
-  Now the inner function is stored in the addTen variable! 
+  Now the inner function is stored in the addTen variable!
 
   Call the addTen function passing in another number and
   console log the result.
@@ -226,11 +235,11 @@ var users = [
 // CODE HERE
 
 /*
-  Let's make another function from the addingFactory. 
+  Let's make another function from the addingFactory.
 
   This time, pass in your favorite number and name
   the variable addNUMBER with the name of the number
-  you chose. 
+  you chose.
 
   Once you create that, you can invoke the function
   to add any number to your favorite number!
