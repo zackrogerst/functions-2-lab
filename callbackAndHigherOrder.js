@@ -141,7 +141,7 @@ const uniq = (arr, cbak) => {
 
 // CODE HERE
 
-uniq(names, uniqArr => console.log(`The new names array with all the duplicate items removed is ${uniqArr}.`));
+// uniq(names, uniqArr => console.log(`The new names array with all the duplicate items removed is ${uniqArr}.`));
 
 
 ////////// PROBLEM 6 //////////
@@ -154,6 +154,9 @@ uniq(names, uniqArr => console.log(`The new names array with all the duplicate i
 // CODE HERE 
 
 
+const each = (arr, cbak) => arr.forEach((item, index) => cbak(item, index));
+
+
 /*
   Invoke the each function, passing in the names array and a callback function.
   The callback function should take in two parameters, item and index.
@@ -162,6 +165,8 @@ uniq(names, uniqArr => console.log(`The new names array with all the duplicate i
 */
 
 // CODE HERE
+
+// each(names, (item, index) => console.log(`The item at index ${index} is ${item}.`));
 
 
 ////////// PROBLEM 7 //////////
