@@ -7,15 +7,16 @@
 
 // CODE HERE
 
+// function multiply (num1, num2, cbak) { return cbak(num1 * num2);}
+const multiply = (num1, num2, cbak) => cbak(num1 * num2);
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// multiply(4, 3, answer => {
-//   console.log('The answer is ' + answer) //should console.log 12
-// })
-
+multiply(4, 3, answer => {
+  console.log('The answer is ' + answer) //should console.log 12
+})
 
 
 ////////// PROBLEMS 2 - 6 //////////
